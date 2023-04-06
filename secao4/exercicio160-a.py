@@ -11,13 +11,22 @@ novosProdutos = deepcopy(produtos)
 ordenarDictPorNome = lambda x: x["nome"]
 novosProdutos.sort(key= ordenarDictPorNome)
 
-for i in range(len(novosProdutos)):
-    for x in novosProdutos[i]:
-        if x == 'nome':
-            novosProdutos[i][x] = novosProdutos[i][x].title()
-        if x == 'preco':
-            novosProdutos[i][x] += round(novosProdutos[i][x] * 0.1)
-    print(novosProdutos[i])
+novosProdutos = [
+    {**produto, 
+           'nome': produto['nome'].title(), 
+           'preco': round(produto['preco'] * 1.1, 2)}
+    for produto in novosProdutos
+]
+for x in range(len(novosProdutos)):
+    print(novosProdutos[x])
+    
+# for i in range(len(novosProdutos)):
+#     for x in novosProdutos[i]:
+#         if x == 'nome':
+#             novosProdutos[i][x] = novosProdutos[i][x].title()
+#         if x == 'preco':
+#             novosProdutos[i][x] += round(novosProdutos[i][x] * 0.1)
+#     print(novosProdutos[i])
     
 
 
