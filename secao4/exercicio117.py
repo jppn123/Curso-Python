@@ -33,3 +33,11 @@ except ValueError:
 #         return valor * multiplicador
 #     return multiplicar
 
+# duplicar = multiplier(2)
+# triplicar = multiplier(3)
+# quadruplicar = multiplier(4)
+
+# print(duplicar(2))
+# print(triplicar(2))
+# print(quadruplicar(2))
+
